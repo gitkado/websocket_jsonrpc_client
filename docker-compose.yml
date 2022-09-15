@@ -1,0 +1,17 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    tty: true
+    command: ['python', 'main.py']
+    ports:
+      - '8765:8765'
+    volumes:
+      - ./server/src:/app
+  client:
+    build: ./client
+    tty: true
+#    command: ['python', 'main.py']
+    command: ['sh']
+    volumes:
+      - ./client/src:/app
