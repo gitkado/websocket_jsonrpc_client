@@ -11,7 +11,7 @@ services:
   client:
     build: ./client
     tty: true
-#    command: ['python', 'main.py']
-    command: ['sh']
+#    command: ['sh']
+    command: ['python', 'main.py']
     volumes:
       - ./client/src:/app

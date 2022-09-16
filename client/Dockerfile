@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.9
 COPY requirements.txt /requirements/requirements.txt
 RUN apt update \
     && pip install --upgrade pip \
